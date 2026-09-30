@@ -1,5 +1,8 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fly Information
 </title>
 
@@ -28,6 +31,33 @@ a:hover {color:#d2691e; text-decoration:underline;}
 
 -->
 
+
+/* Keep the original floating menu feel without separate frames. */
+:root { --fly-nav-height: min(9rem, 40vh); }
+body { margin: 0; background: #ffe4c4; }
+.fly-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  height: var(--fly-nav-height);
+  overflow: auto;
+  padding: .5rem 1rem;
+  background: #ffe4c4;
+  border-bottom: 1px solid #cc6600;
+  text-align: center;
+}
+.fly-nav h2 { font-size: 30px; margin: 0 0 .5rem; }
+.fly-nav p { margin: .5rem 0; line-height: 1.6; }
+.fly-nav a { display: inline-block; }
+main { padding: 0 8px calc(100vh - var(--fly-nav-height)); }
+main h1 { scroll-margin-top: calc(var(--fly-nav-height) + 1rem); }
+a:focus-visible { outline: 2px solid #cc6600; outline-offset: 3px; }
+@media (max-width: 600px) {
+  :root { --fly-nav-height: min(12rem, 40vh); }
+  .fly-nav h2 { font-size: 24px; }
+}
+
 </style>
 </head>
 
@@ -35,13 +65,33 @@ a:hover {color:#d2691e; text-decoration:underline;}
 <body bgcolor=ffe4c4 >
 
 
+<nav class="fly-nav" aria-label="Fly navigation">
+<h2>Fly Information</h2>
+<p>
+<a href="#blackgnat">Black Gnat,</a>
+<a href="#brownhackle">Brown Hackle,</a>
+<a href="#gotya">Gotya,</a>
+<a href="#greendevilbug">Green Devil Bug,</a>
+<a href="#mkeyfun">Mickey Finn,</a>
+<a href="#reddevilbug">Red Devil Bug,</a>
+<a href="#r+w">Red and White,</a>
+<a href="#rcoachmendry">Dry Royal Coachman,</a>
+<a href="#rcoachmenwet">Wet Royal Coachman,</a>
+<a href="#strongman">Strongman,</a>
+<a href="#wollybug">Wooly Bugger,</a>
+<a href="#y+w">Yellow and White,</a>
+<a href="#ydevilbug">Yellow Devil Bug</a>
+</p>
+<p><a href="momflypage.html">Back to the Main Page</a></p>
+</nav>
+
+<main>
+
 <!-- fly information -->
 
 
-<a name="#blackgnat">
-<h1>Black Gnat
+<h1 id="blackgnat">Black Gnat
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=blackgnat546.gif alt="Click to order" border=0>
@@ -59,10 +109,8 @@ Wings: Dark goose wings<br>
 </p>
 
 
-<a name="#brownhackle">
-<h1>Brown Hackle
+<h1 id="brownhackle">Brown Hackle
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=wetbrnhackle256.gif alt="Click to order" border=0>
@@ -79,10 +127,8 @@ Hackle: 1 brown hackle<br>
 </p>
 
 
-<a name="#gotya">
-<h1>Gotya
+<h1 id="gotya">Gotya
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=gotya256.gif alt="Click to order" border=0>
@@ -99,10 +145,8 @@ Hackle: Same color feathers as tail, wrapped twice at the head<br>
 </p>
 
 
-<a name="#greendevilbug">
-<h1>Green Devil Bug
+<h1 id="greendevilbug">Green Devil Bug
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=greendevilbug256.gif alt="Click to order" border=0>
@@ -119,10 +163,8 @@ Hackle: Deer hair<br>
 </p>
 
 
-<a name="#mkeyfun">
-<h1>Mickey Finn
+<h1 id="mkeyfun">Mickey Finn
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=mkeyfun256.gif alt="Click to order" border=0>
@@ -139,10 +181,8 @@ Hackle: Deer hair tied to head<br>
 </p>
 
 
-<a name="#reddevilbug">
-<h1>Red Devil Bug
+<h1 id="reddevilbug">Red Devil Bug
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=reddevilbug256.gif alt="Click to order" border=0>
@@ -159,10 +199,8 @@ Hackle: White deer hair at the head<br>
 </p>
 
 
-<a name="#r+w">
-<h1>Red and White
+<h1 id="r+w">Red and White
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=r+w256.gif alt="Click to order" border=0>
@@ -179,10 +217,8 @@ Hackle: Red and white cow's tail<br>
 </p>
 
 
-<a name="#rcoachmendry">
-<h1>Royal Coachman, dry
+<h1 id="rcoachmendry">Royal Coachman, dry
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=royalcoachmen256.gif alt="Click to order" border=0>
@@ -198,10 +234,8 @@ Hackle: White feathers, brown hackle feathers<br>
 <a href="trial.htm" target="_top">Order Form</a>
 </p>
 
-<a name="#rcoachmenwet">
-<h1>Royal Coachman, wet
+<h1 id="rcoachmenwet">Royal Coachman, wet
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=wetcoachmen256.gif alt="Click to order" border=0>
@@ -218,10 +252,8 @@ Hackle: White feathers<br>
 </p>
 
 
-<a name="#strongman">
-<h1>Strongman
+<h1 id="strongman">Strongman
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=strongman256.gif alt="Click to order" border=0>
@@ -237,10 +269,8 @@ Hackle: Deer hair<br>
 </p>
 
 
-<a name="#wollybug">
-<h1>Wooly Bugger
+<h1 id="wollybug">Wooly Bugger
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=wollybug256.gif alt="Click to order" border=0>
@@ -257,10 +287,8 @@ Hackle: Barred rock (grizzly)<br>
 </p>
 
 
-<a name="#y+w">
-<h1>Yellow and White
+<h1 id="y+w">Yellow and White
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=r+yellow256.gif alt="Click to order" border=0>
@@ -276,10 +304,8 @@ Hackle: Yellow and white cows tail<br>
 </p>
 
 
-<a name="#ydevilbug">
-<h1>Yellow Devil Bug
+<h1 id="ydevilbug">Yellow Devil Bug
 </h1>
-</a>
 <p align=center>
 <a href="trial.htm" target="_top">
 <img src=ydevbug256.gif alt="Click to order" border=0>
@@ -296,5 +322,6 @@ Hackle: Deer hair tied to head<br>
 </p>
 
 
+</main>
 </body>
 </html>
