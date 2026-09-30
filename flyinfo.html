@@ -15,9 +15,9 @@
 
 p {font-family:trebuchet ms; font-size:15px; font-weight:demi-bold; color:#ff8c00; text-align:center}
 
-h1 {font-family: trebuchet ms; font size: 20px; font-weight:bold;text-transform:uppercase; color:#cc6600;text-align:center}
+main h2 {margin: .67em 0; font-family: trebuchet ms; font-size: 2em; font-weight:bold;text-transform:uppercase; color:#cc6600;text-align:center}
 
-h2 { font-family:trebuchet ms; font-size: 40px;font-style:normal;font-weight:bold;text-transform:bold;color:#cc6600;text-align:center}
+h1 { font-family:trebuchet ms; color:#cc6600; text-align:center; }
 
 a {text-align:center;font-family:trebuchet ms;font-size:15px; text-decoration:none}
 
@@ -47,17 +47,27 @@ body { margin: 0; background: #ffe4c4; }
   border-bottom: 1px solid #cc6600;
   text-align: center;
 }
-.fly-nav h2 { font-size: 30px; margin: 0 0 .5rem; }
+.fly-nav h1 { font-size: 30px; margin: 0 0 .5rem; }
 .fly-nav p { margin: .5rem 0; line-height: 1.6; }
 .fly-nav a { display: inline-block; }
 main { padding: 0 8px calc(100vh - var(--fly-nav-height)); }
-main h1 { scroll-margin-top: calc(var(--fly-nav-height) + 1rem); }
-a:focus-visible { outline: 2px solid #cc6600; outline-offset: 3px; }
+main h2, main { scroll-margin-top: calc(var(--fly-nav-height) + 1rem); }
 @media (max-width: 600px) {
   :root { --fly-nav-height: min(12rem, 40vh); }
-  .fly-nav h2 { font-size: 24px; }
+  .fly-nav h1 { font-size: 24px; }
 }
 
+
+/* Keyboard helpers appear only when focused; keep the original palette. */
+a:focus-visible, area:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #cc6600;
+  outline-offset: 3px;
+}
+.skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 2;
+  padding: .5rem; background: #ffe4c4; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+
+main img { max-width: 100%; height: auto; }
 </style>
 </head>
 
@@ -65,8 +75,9 @@ a:focus-visible { outline: 2px solid #cc6600; outline-offset: 3px; }
 <body bgcolor=ffe4c4 >
 
 
+<a class="skip-link" href="#fly-details">Skip to fly details</a>
 <nav class="fly-nav" aria-label="Fly navigation">
-<h2>Fly Information</h2>
+<h1>Fly Information</h1>
 <p>
 <a href="#blackgnat">Black Gnat,</a>
 <a href="#brownhackle">Brown Hackle,</a>
@@ -85,16 +96,16 @@ a:focus-visible { outline: 2px solid #cc6600; outline-offset: 3px; }
 <p><a href="momflypage.html">Back to the Main Page</a></p>
 </nav>
 
-<main>
+<main id="fly-details" tabindex="-1" aria-label="Fly details">
 
 <!-- fly information -->
 
 
-<h1 id="blackgnat">Black Gnat
-</h1>
+<h2 id="blackgnat" tabindex="-1">Black Gnat
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=blackgnat546.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Black Gnat — archived order form (orders closed)">
+<img src=blackgnat546.gif alt="Black Gnat fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -105,15 +116,15 @@ Tail: Black barbs<br>
 Body: Black chenille yarn<br>
 Hackle: Soft black, beard style<br>
 Wings: Dark goose wings<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Black Gnat — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="brownhackle">Brown Hackle
-</h1>
+<h2 id="brownhackle" tabindex="-1">Brown Hackle
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=wetbrnhackle256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Brown Hackle — archived order form (orders closed)">
+<img src=wetbrnhackle256.gif alt="Brown Hackle fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -123,15 +134,15 @@ It comes in sizes 10, 12, 14, 16.<br>
 Tail: Gold tinsel<br>
 Body: 3-4 peacock herls<br>
 Hackle: 1 brown hackle<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Brown Hackle — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="gotya">Gotya
-</h1>
+<h2 id="gotya" tabindex="-1">Gotya
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=gotya256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Gotya — archived order form (orders closed)">
+<img src=gotya256.gif alt="Gotya fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -141,15 +152,15 @@ It comes in sizes 8, 10, 12, 14<br>
 Tail: Cream feathers<br>
 Body: White thread up and down shaft<br>
 Hackle: Same color feathers as tail, wrapped twice at the head<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Gotya — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="greendevilbug">Green Devil Bug
-</h1>
+<h2 id="greendevilbug" tabindex="-1">Green Devil Bug
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=greendevilbug256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Green Devil Bug — archived order form (orders closed)">
+<img src=greendevilbug256.gif alt="Green Devil Bug fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -159,15 +170,15 @@ It comes in sizes 8, 10, 12, 14.<br>
 Tail: Deer hair<br>
 Body: Chenille - green<br>
 Hackle: Deer hair<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Green Devil Bug — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="mkeyfun">Mickey Finn
-</h1>
+<h2 id="mkeyfun" tabindex="-1">Mickey Finn
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=mkeyfun256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Mickey Finn — archived order form (orders closed)">
+<img src=mkeyfun256.gif alt="Mickey Finn fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -177,15 +188,15 @@ It comes in sizes 8, 10, 12, 14<br>
 Tail: Deer Hair<br>
 Body: Chenille - green<br>
 Hackle: Deer hair tied to head<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Mickey Finn — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="reddevilbug">Red Devil Bug
-</h1>
+<h2 id="reddevilbug" tabindex="-1">Red Devil Bug
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=reddevilbug256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Red Devil Bug — archived order form (orders closed)">
+<img src=reddevilbug256.gif alt="Red Devil Bug fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -195,15 +206,15 @@ It comes in sizes 8, 10, 12, 14<br>
 Tail: Deer hair, white<br>
 Body: Chenille - red<br>
 Hackle: White deer hair at the head<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Red Devil Bug — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="r+w">Red and White
-</h1>
+<h2 id="r+w" tabindex="-1">Red and White
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=r+w256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Red and White — archived order form (orders closed)">
+<img src=r+w256.gif alt="Red and White fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -213,15 +224,15 @@ It comes in sizes 4, 6, 8, 10<br>
 Tail: Red yarn<br>
 Body: Silver tinsel and silver cord, 3-4 peacock herls<br>
 Hackle: Red and white cow's tail<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Red and White — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="rcoachmendry">Royal Coachman, dry
-</h1>
+<h2 id="rcoachmendry" tabindex="-1">Royal Coachman, dry
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=royalcoachmen256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Royal Coachman, dry — archived order form (orders closed)">
+<img src=royalcoachmen256.gif alt="Royal Coachman, dry fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -231,14 +242,14 @@ It comes in sizes 10, 12, 14<br>
 Tail: Golden tail tippets<br>
 Body: Red floss, peacock herls<br>
 Hackle: White feathers, brown hackle feathers<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Royal Coachman, dry — archived order form (orders closed)">Order Form</a>
 </p>
 
-<h1 id="rcoachmenwet">Royal Coachman, wet
-</h1>
+<h2 id="rcoachmenwet" tabindex="-1">Royal Coachman, wet
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=wetcoachmen256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Royal Coachman, wet — archived order form (orders closed)">
+<img src=wetcoachmen256.gif alt="Royal Coachman, wet fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -248,15 +259,15 @@ It comes in sizes 10, 12, 14<br>
 Tail: Golden tail tippets<br>
 Body: 3 pieces of peacock herl<br>
 Hackle: White feathers<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Royal Coachman, wet — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="strongman">Strongman
-</h1>
+<h2 id="strongman" tabindex="-1">Strongman
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=strongman256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Strongman — archived order form (orders closed)">
+<img src=strongman256.gif alt="Strongman fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -265,15 +276,15 @@ It comes in sizes 8, 10, 12, 14<br>
 <br>
 Body: Deer hair<br>
 Hackle: Deer hair<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Strongman — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="wollybug">Wooly Bugger
-</h1>
+<h2 id="wollybug" tabindex="-1">Wooly Bugger
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=wollybug256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Wooly Bugger — archived order form (orders closed)">
+<img src=wollybug256.gif alt="Wooly Bugger fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -283,15 +294,15 @@ It comes in sizes 6, 8, 10<br>
 Tail: Black marabou feather<br>
 Body: Medium thickness chenille<br>
 Hackle: Barred rock (grizzly)<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Wooly Bugger — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="y+w">Yellow and White
-</h1>
+<h2 id="y+w" tabindex="-1">Yellow and White
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=r+yellow256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Yellow and White — archived order form (orders closed)">
+<img src=r+yellow256.gif alt="Yellow and White fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -300,15 +311,15 @@ It comes in sizes 4, 6, 8, 10<br>
 <br>
 Body: Silver tinsel and cord<br>
 Hackle: Yellow and white cows tail<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Yellow and White — archived order form (orders closed)">Order Form</a>
 </p>
 
 
-<h1 id="ydevilbug">Yellow Devil Bug
-</h1>
+<h2 id="ydevilbug" tabindex="-1">Yellow Devil Bug
+</h2>
 <p align=center>
-<a href="trial.htm" target="_top">
-<img src=ydevbug256.gif alt="Click to order" border=0>
+<a href="trial.htm" target="_top" aria-label="Yellow Devil Bug — archived order form (orders closed)">
+<img src=ydevbug256.gif alt="Yellow Devil Bug fishing fly" border=0>
 </a>
 </p>
 <p align=center>
@@ -318,7 +329,7 @@ It comes in sizes 8, 10, 12, 14<br>
 Tail: Deer hair<br>
 Body: Chenille - yellow<br>
 Hackle: Deer hair tied to head<br>
-<a href="trial.htm" target="_top">Order Form</a>
+<a href="trial.htm" target="_top" aria-label="Yellow Devil Bug — archived order form (orders closed)">Order Form</a>
 </p>
 
 

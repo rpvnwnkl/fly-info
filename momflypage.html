@@ -1,6 +1,9 @@
-<HTML>
+<!doctype html>
+<html lang="en">
 
 <HEAD>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <TITLE> Flies by Charlie 
 </TITLE>
@@ -21,55 +24,72 @@ a:active {color:#d2691e; text-decoration:none}
 a:hover {color:#d2691e; text-decoration:underline;}
 
 -->
+
+/* Keyboard helpers appear only when focused; keep the original palette. */
+a:focus-visible, area:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #cc6600;
+  outline-offset: 3px;
+}
+.skip-link { position: fixed; top: .5rem; left: .5rem; z-index: 2;
+  padding: .5rem; background: #ffe4c4; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+
+.site-title { font-size: 1em; font-weight: normal; margin: 1em 0; text-align: center; }
+.site-title img, .about-link img { max-width: 100%; height: auto; }
+.fly-map { max-width: 100%; overflow: auto; text-align: center; }
 </style>
 
 </HEAD>
 
 <BODY bgcolor=#ffe4c4 >
 
-<p align=center>
-<img src="title2.GIF">
-</p>
+<a class="skip-link" href="flyinfo.html">Browse flies by name</a>
+<main>
+<h1 class="site-title">
+<img src="title2.GIF" alt="Flies">
+</h1>
 
 <p align=center>
-<a href="howitstarted.html"><img src="name2.GIF" alt="Click To Learn About Charlie" border=0></a>
+<a class="about-link" href="howitstarted.html" aria-label="Made by Charlie — learn about Charlie"><img src="name2.GIF" alt="Made by Charlie" border=0></a>
 </p>
 
 <!-- image map -->
 
-<p align=center>
+<div class="fly-map" tabindex="0" role="group" aria-label="Choose a fly; scroll horizontally if needed">
 <map name="flycentral">
-<area shape=rect coords="128,215,199,262" href="flyinfo.html#blackgnat" alt="black gnat">
+<area shape=rect coords="128,215,199,262" href="flyinfo.html#blackgnat" alt="View Black Gnat details">
 
-<area shape=rect coords="346,143,403,190" href="flyinfo.html#brownhackle" alt="Brown Hackle">
+<area shape=rect coords="346,143,403,190" href="flyinfo.html#brownhackle" alt="View Brown Hackle details">
 
-<area shape=rect coords="198,282,312,328" href="flyinfo.html#gotya" alt="gotya">
+<area shape=rect coords="198,282,312,328" href="flyinfo.html#gotya" alt="View Gotya details">
 
-<area shape=rect coords="161,103,244,153" href="flyinfo.html#greendevilbug" alt="green devil bug">
+<area shape=rect coords="161,103,244,153" href="flyinfo.html#greendevilbug" alt="View Green Devil Bug details">
 
-<area shape=rect coords="324,26,458,86" href="flyinfo.html#mkeyfun" alt="mickey finn">
+<area shape=rect coords="324,26,458,86" href="flyinfo.html#mkeyfun" alt="View Mickey Finn details">
 
-<area shape=rect coords="259,117,321,158" href="flyinfo.html#reddevilbug" alt="red devil bug">
+<area shape=rect coords="259,117,321,158" href="flyinfo.html#reddevilbug" alt="View Red Devil Bug details">
 
-<area shape=rect coords="20,10,165,88" href="flyinfo.html#r+w" alt="red and white">
+<area shape=rect coords="20,10,165,88" href="flyinfo.html#r+w" alt="View Red and White details">
 
-<area shape=rect coords="192,42,294,90" href="flyinfo.html#rcoachmendry" alt="royal coachman, dry">
+<area shape=rect coords="192,42,294,90" href="flyinfo.html#rcoachmendry" alt="View Royal Coachman, dry details">
 
-<area shape=rect coords="65,108,137,147" href="flyinfo.html#rcoachmenwet" alt="royal coachman, wet">
+<area shape=rect coords="65,108,137,147" href="flyinfo.html#rcoachmenwet" alt="View Royal Coachman, wet details">
 
-<area shape=rect coords="273,231,333,272" href="flyinfo.html#strongman" alt="strongman">
+<area shape=rect coords="273,231,333,272" href="flyinfo.html#strongman" alt="View Strongman details">
 
-<area shape=rect coords="1,190,93,240" href="flyinfo.html#y+w" alt="Yellow and white">
+<area shape=rect coords="1,190,93,240" href="flyinfo.html#y+w" alt="View Yellow and White details">
 
-<area shape=rect coords="213,167,280,208" href="flyinfo.html#ydevilbug" alt="yellow devil bug">
+<area shape=rect coords="213,167,280,208" href="flyinfo.html#ydevilbug" alt="View Yellow Devil Bug details">
 
-<area shape=rect coords="373,205,493,289" href="flyinfo.html#wollybug" alt="wooly bug">
+<area shape=rect coords="373,205,493,289" href="flyinfo.html#wollybug" alt="View Wooly Bugger details">
 
 </map>
 
-<img src="Image8.gif" alt="click here to view flies" border=0 usemap="#flycentral">
+<img src="Image8.gif" alt="Thirteen fishing flies; select a fly for its details" border=0 usemap="#flycentral">
+</div>
 
 
 
+</main>
 </BODY>
 </HTML>
